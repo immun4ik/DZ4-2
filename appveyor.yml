@@ -1,0 +1,10 @@
+version: '{build}'
+image: Visual Studio 2022
+platform: Any CPU
+
+before_build:
+   - ps: Install-Product node 18
+
+build_script:
+   - npm install
+   - npm test
